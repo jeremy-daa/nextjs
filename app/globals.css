@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.light {
+  --text: rgb(23, 23, 39);
+  --bg: rgb(236, 236, 236);
+  --sign: rgb(172, 180, 192);
+}
+.dark {
+  --bg: rgb(23, 23, 39);
+  --text: rgb(236, 236, 236);
+  --sign: rgb(40, 52, 72);
+}
+
+.categoryPill {
+  @apply xl:w-[14%] md:w-[25%] sm:w-[45%] w-full px-5 py-4 h-[60px] rounded-md flex justify-center items-center md:gap-5 gap-2;
+}
+.categoryPill2 {
+  @apply w-fit p-2 px-5 rounded-2xl text-sm;
+}
+
+.bg-orange-400 {
+  background-color: rgb(251 146 60);
+}
+.bg-yellow-400 {
+  background-color: rgb(250 204 21);
+}
+.bg-blue-400 {
+  background-color: rgb(96 165 250);
+}
+.bg-pink-400 {
+  background-color: rgb(244 114 182);
+}
+.ql-container {
+  font-size: 20px !important;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  @apply text-slate-500;
+}
