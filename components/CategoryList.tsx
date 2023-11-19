@@ -13,7 +13,7 @@ export const getData = async (endpoint: string) => {
     cache: "no-cache",
   });
   if (!res.ok) {
-    return null;
+    return [];
   }
   return res.json();
 };

@@ -24,6 +24,7 @@ const CardList = async ({
   category?: string;
 }) => {
   const [posts, count] = await getData(`posts?page=${page}&cat=${category}`);
+  const postsArr: post[] = posts;
   const posts_page = count;
   const post_per_page = 2;
   const total_pages = Math.ceil(posts_page / post_per_page);
@@ -34,8 +35,8 @@ const CardList = async ({
     <div className="py-7 flex-[0.7]">
       <div className="flex w-full justify-start items-start flex-col gap-8">
         <h1 className="text-xl font-bold">Recent Posts</h1>
-        {posts &&
-          posts.map((data: post, index: number) => (
+        {postsArr &&
+          postsArr.map((data: post, index: number) => (
             <Card
               key={index}
               img={data.img}
