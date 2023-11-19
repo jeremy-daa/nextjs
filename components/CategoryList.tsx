@@ -9,7 +9,7 @@ interface category {
   Posts: any[];
 }
 export const getData = async (endpoint: string) => {
-  const res = await fetch(`http://localhost:3000/api/${endpoint}`, {
+  const res = await fetch(`https://lambda-blog.vercel.app/api/${endpoint}`, {
     cache: "no-cache",
   });
   if (!res.ok) {

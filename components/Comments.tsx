@@ -28,12 +28,12 @@ const Comments = ({ postSlug }: { postSlug: string }) => {
   const status = useSession().status === "authenticated" ? false : true;
 
   const { data, mutate, isLoading } = useSWR(
-    `http://localhost:3000/api/comments?postSlug=${postSlug}`,
+    `https://lambda-blog.vercel.app/api/comments?postSlug=${postSlug}`,
     fetcher
   );
   const [desc, setDesc] = useState("");
   const handleSubmit = async () => {
-    const res = await fetch("http://localhost:3000/api/comments", {
+    const res = await fetch("https://lambda-blog.vercel.app/api/comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
