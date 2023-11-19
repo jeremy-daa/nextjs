@@ -23,13 +23,13 @@ type Post = {
   userEmail: string;
   user: User;
 };
-// export async function generateMetadata({ params }: Params): Promise<Metadata> {
-//   const post: Post = await getData("posts/" + params.slug);
-//   return {
-//     title: post.title,
-//     description: post.desc,
-//   };
-// }
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const post: Post = await getData("posts/" + params.slug);
+  return {
+    title: post.title,
+    description: post.desc,
+  };
+}
 
 const page = async ({ params: { slug } }: Params) => {
   const post: Post = await getData("posts/" + slug);

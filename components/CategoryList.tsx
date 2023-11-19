@@ -37,7 +37,7 @@ const CategoryList = async () => {
           data.map((data, index) => (
             <Link
               key={index}
-              href={`/?cat=${data.slug}`}
+              href={`/blog?cat=${data.slug}`}
               className={`categoryPill ${colors[index]}`}
             >
               <div className="w-8 h-8 flex justify-center items-center rounded-full overflow-hidden relative">
