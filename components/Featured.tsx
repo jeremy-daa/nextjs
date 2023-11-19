@@ -16,20 +16,9 @@ const Featured = () => {
             />
           </div>
           <div className="flex-1 flex flex-col gap-4">
-            <h1 className="text-3xl font-extrabold tracking-wider uppercase">
+            <h1 className="text-3xl font-extrabold tracking-wider capitalize">
               Lambda Blog
             </h1>
-            {/* Features of this blog site:
-              <ul>
-                <li>Authentication using Auth.js</li>
-                <li>OAuth using google&apos;s API</li>
-                <li>Theme switcher</li>
-                <li>DB using Mongo DB Atlas</li>
-                <li>Server side rendering using Next.js 14</li>
-                <li>Image storage using Firebase Firestore</li>
-                <li>Prisma ORM</li>
-                <li>API routes</li>
-              </ul> */}
             <h2 className="text-xl">Features of this blog:</h2>
             <ul className="w-full flex justify-center gap-2 items-start p-2 text-sm flex-col">
               <li>&#9679; Authentication using Auth.js</li>
